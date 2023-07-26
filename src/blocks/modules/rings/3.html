@@ -1,0 +1,39 @@
+<div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      @@include('../UI/step-header.html', { 
+        number: "03", 
+        title: "What type of setting do you prefer?",
+        subtile: '',
+      })
+      @@include('../items/index.html', {
+        type: 'rings',
+        step: '3',
+        view: '3',
+        arr: [
+          {
+            name: 'Solitaire',
+            id: 'Solitaire',
+            img: 'q-ring-type-1.png'
+          },
+          {
+            name: 'Halo',
+            id: 'Halo',
+            img: 'q-ring-type-2.png'
+          },
+          {
+            name: 'Three stones',
+            id: 'Three stones',
+            img: 'q-ring-type-3.png'
+          }
+        ]
+      })
+      @@include('../UI/controller.html', { 
+        steps: 7,
+        progress: 3,
+        prevHide: '',
+        nextIsFormButtons: false,
+      })
+    </div>
+  </div>
+</div>

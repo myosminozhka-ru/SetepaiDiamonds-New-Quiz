@@ -1,0 +1,44 @@
+<div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      @@include('../UI/step-header.html', { 
+        number: "01", 
+        title: "What type of jewelry are you looking for?",
+        subtile: '',
+      })
+      @@include('../items/index.html', {
+        type: 'start',
+        step: '1',
+        view: '1',
+        arr: [
+          {
+            name: 'Ring',
+            id: 'ring',
+            img: 'step1-1.jpg'
+          },
+          {
+            name: 'Tennis<br class="br-sp"/> Bracelet',
+            id: 'bracelet',
+            img: 'step1-2.jpg'
+          },
+          {
+            name: 'Stud<br class="br-sp"/> Earrings',
+            id: 'earrings',
+            img: 'step1-3.jpg'
+          },
+          {
+            name: 'Necklace',
+            id: 'necklace',
+            img: 'step1-4.jpg'
+          },
+        ]
+      })
+      @@include('../UI/controller.html', { 
+        steps: 7,
+        progress: 1,
+        prevHide: 'q-hide',
+        nextIsFormButtons: false,
+      })
+    </div>
+  </div>
+</div>

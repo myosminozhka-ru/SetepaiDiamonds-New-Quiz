@@ -1,0 +1,48 @@
+<div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      @@include('../UI/step-header.html', { 
+        number: "04", 
+        title: 'Do you have a specific budget in mind<br class="br-pc"> for the custom jewelry?',
+        subtile: '', 
+      })
+      @@include('../items/index.html', {
+        type: 'earrings',
+        step: '4',
+        view: '4',
+        arr: [
+          {
+            name: '&lt5000$',
+            id: '5000',
+          },
+          {
+            name: '&lt10 000$',
+            id: '10000',
+          },
+          {
+            name: '&lt20 000$',
+            id: '20000',
+          },
+          {
+            name: '&lt30 000$',
+            id: '30000',
+          },
+          {
+            name: '&lt50 000$',
+            id: '50000',
+          },
+          {
+            name: 'I dont<br class="br-pc"/> know yet',
+            id: 'none',
+          },
+        ]
+      })
+      @@include('../UI/controller.html', { 
+        steps: 7,
+        progress: 4,
+        prevHide: '',
+        nextIsFormButtons: false,
+      })
+    </div>
+  </div>
+</div>

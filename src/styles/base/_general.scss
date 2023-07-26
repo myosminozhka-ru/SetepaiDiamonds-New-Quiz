@@ -11,17 +11,18 @@ html {
 }
 body {
   font-size: 16px;
-  padding-top: 92px;
+  padding-top: 0;
+  background: #F5F5F5;
+  height: auto;
+  overflow: auto;
 
   &.lock {
     overflow: hidden;
   }
 
   @include tab {
-    padding-top: 100px;
   }  
   @include mob {
-    font-size: 14px;
   }
 }
 h1, h2, h3, h4, h5, h6, ul, p {
@@ -97,110 +98,13 @@ a {
   text-decoration: none;
 }
 
-.osmi-container {
+.q-container {
   width: 100%;
   max-width: $container-width;
-  padding: 0 30px;
+  padding: 0 15px;
   margin: 0 auto;
-  @include mob {
-    padding: 0 20px;
-  }
 }
 
-
-.h1 {
-  font-size: 64px;
-  font-family: $title-font;
-  line-height: 1.1;
-  @include mob {
-    font-size: 48px;
-  }
-}
-
-.h2 {
-  font-size: 48px;
-  font-family: $title-font;
-  @include mob {
-    font-size: 40px;
-  }
-}
-
-.h3 {
-  font-size: 24px;
-  @include mob {
-    font-size: 20px;
-  }
-}
-
-.h4 {
-  font-size: 18px;
-  @include mob {
-    font-size: 16px;
-  }
-}
-
-.link, 
-.link-2,
-.link-3 {
-  transition: color 300ms;
-  &:hover {
-    color: $accent;
-  }
-}
-
-.link-2 {
-  font-size: 18px;
-  line-height: 140%;
-  letter-spacing: -0.02em;
-  text-decoration-line: underline;
-  @include mob {
-    font-size: 16px;
-  }
-}
-
-.link-3 {
-  font-size: 18px;
-  line-height: 140%;
-  @include mob {
-    font-size: 16px;
-  }
-}
-
-.text-2 {
-  font-size: 32px;
-  @include mob {
-    font-size: 24px;
-  }
-}
-
-.text-3 {
-  font-size: 18px;
-  @include mob {
-    font-size: 16px;
-  }
-}
-
-.text-4 {
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.text-5 {
-  color: grey;
-}
-
-.texts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: gutter(6);
-  @include tab {
-    grid-gap: gutter(5);
-  }
-  @include mob {
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: gutter(4);
-  }
-}
 
 .visually-hidden {
   position: absolute;
@@ -224,116 +128,35 @@ a {
   display: none;
 }
 
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 24px;
-  color: $white;
-  font-size: 16px;
-  background-color: $accent;
-  border: 1px solid $accent;
-  border-radius: 4px;
-  transition-duration: 300ms;
-  transition-property: color, background, border;
-  img {
-    flex-shrink: 0;
-    height: 15px;
-    width: auto;
-  }
-  &:hover {
-    background-color: $white;
-    color: $accent;
-    border-color: $accent;
-  }
-  &:disabled {
-    opacity: 0.5;
-    cursor: default;
-    pointer-events: none;
-  }
-  &--white {
-    background-color: $white;
-    color: $accent;
-    border-color: $white;
-    &:hover {
-      background-color: rgba($color: #000000, $alpha: 0);
-      color: $white;
-      border-color: $white;
-    }
-  }
-  &--border {
-    background-color: $white;
-    color: $accent;
-    border-color: $accent;
-    &:hover {
-      background-color: $accent;
-      color: $white;
-      border-color: $accent;
-    }
-  }
-  &--tag {
-    font-size: 14px;
-    line-height: 1;
-    padding: gutter(2) gutter(5);
-  }
+.br-sp {
+  display: none;
   @include tab {
-    &--tab-full {
-      width: 100%;
-      max-width: 344px;
-    }
-  }
-  @include mob {
-    font-size: 16px;
-    &--tab-full {
-      max-width: none;
-    }
-    &--mob-full {
-      width: 100%;
-      max-width: none;
-    }
+    display: inline;
   }
 }
-
+.br-pc {
+  display: inline;
+  @include mob {
+    display: none;
+  }
+}
 .only-pc {
-  @include tab {
+  @include mob {
     display: none;
   }
 }
 
-.slider-pag {
-  &--bullets {
-    width: auto !important;
+.q-step {
+  &__inner {
     display: flex;
-    align-items: center;
-    span {
-      width: 10px;
-      height: 10px;
-      display: inline-block;
-      margin-right: gutter(3);
-      background-color: $grey;
-      &.active {
-        background-color: $accent;
-        opacity: 1;
-      }
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-  }
-  &--progressbar {
-    position: relative;
-    height: 1px !important;
-    .swiper-pagination-progressbar-fill {
-      background-color: $accent;
-    }
-  }
-}
-
-.section {
-  margin-bottom: 120px;
-  @include tab {
-    margin-bottom: 64px;
+    flex-direction: column;
+    background-color: $blue;
+    padding: 0 10px;
+    min-height: 100vh;
   }
   @include mob {
+    &__inner {
+      padding: 0 5px;
+    }
   }
 }

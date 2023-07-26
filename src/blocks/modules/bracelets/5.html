@@ -1,0 +1,36 @@
+<div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      @@include('../UI/step-header.html', { 
+        number: "05", 
+        title: "Do you have a specific timeline or deadline? ",
+        subtile: '',
+      })
+      @@include('../items/index.html', {
+        type: 'bracelets',
+        step: '5',
+        view: '5',
+        arr: [
+          {
+            name: 'Asap',
+            id: 'Asap',
+          },
+          {
+            name: '1 month',
+            id: '1month',
+          },
+          {
+            name: '&lt1 month',
+            id: 'more1month',
+          },
+        ]
+      })
+      @@include('../UI/controller.html', { 
+        steps: 7,
+        progress: 5,
+        prevHide: '',
+        nextIsFormButtons: false,
+      })
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      @@include('../UI/step-header.html', { 
+        number: "02", 
+        title: "Which shape of diamond do you prefer?",
+        subtile: '',
+      })
+      @@include('../items/index.html', {
+        type: 'earrings',
+        step: '2',
+        view: '2',
+        arr: [
+          {
+            name: 'Round',
+            id: 'Round',
+            img: 'diamond1.png'
+          },
+          {
+            name: 'Oval',
+            id: 'Oval',
+            img: 'diamond2.png'
+          },
+          {
+            name: 'Emerald',
+            id: 'Emerald',
+            img: 'diamond8.png'
+          },
+          {
+            name: 'Cuchion',
+            id: 'Cuchion',
+            img: 'diamond9.png'
+          },
+          {
+            name: 'Heart',
+            id: 'Heart',
+            img: 'diamond5.png'
+          },
+          {
+            name: 'Pear',
+            id: 'Pear',
+            img: 'diamond4.png'
+          },
+        ]
+      })
+      @@include('../UI/controller.html', { 
+        steps: 7,
+        progress: 2,
+        prevHide: '',
+        nextIsFormButtons: false,
+      })
+    </div>
+  </div>
+</div>
