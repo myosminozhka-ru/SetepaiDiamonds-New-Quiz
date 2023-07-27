@@ -3,42 +3,30 @@
     <div class="q-step__inner">
       @@include('../UI/step-header.html', { 
         number: "04", 
-        title: 'Do you have a specific budget in mind<br class="br-pc"> for the custom jewelry?',
-        subtile: '', 
+        title: "Do you have a specific timeline or deadline? ",
+        subtile: '',
       })
       @@include('../items/index.html', {
-        type: 'bracelets',
+        type: 'necklace',
         step: '4',
-        view: '4',
+        view: '5',
         arr: [
           {
-            name: '&lt5000$',
-            id: '5000',
+            name: 'Asap',
+            id: 'Asap',
           },
           {
-            name: '&lt10 000$',
-            id: '10000',
+            name: '1 month',
+            id: '1month',
           },
           {
-            name: '&lt20 000$',
-            id: '20000',
-          },
-          {
-            name: '&lt30 000$',
-            id: '30000',
-          },
-          {
-            name: '&lt50 000$',
-            id: '50000',
-          },
-          {
-            name: 'I dont<br class="br-pc"/> know yet',
-            id: 'none',
+            name: '&lt1 month',
+            id: 'more1month',
           },
         ]
       })
       @@include('../UI/controller.html', { 
-        steps: 7,
+        steps: 6,
         progress: 4,
         prevHide: '',
         nextIsFormButtons: false,

@@ -21,7 +21,7 @@
           </label>
         }
       }
-      @@if (view === '2' || view === '3') {
+      @@if (view === '2' || view === '3' || view === '7') {
         @@for (var i = 0; i < arr.length; i++) {
           <label class="q-items__label">
             <input type="radio" name="step-@@step" value="`+arr[i].id+`" class="q-items__input visually-hidden">
@@ -38,7 +38,7 @@
           </label>
         }
       }
-      @@if (view === '4' || view === '5' || view === '6' || view === '7') {
+      @@if (view === '4' || view === '5' || view === '6') {
         @@for (var i = 0; i < arr.length; i++) {
           <label class="q-items__label">
             <input type="radio" name="step-@@step" value="`+arr[i].id+`" class="q-items__input visually-hidden">

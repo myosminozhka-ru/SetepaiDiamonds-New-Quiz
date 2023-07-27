@@ -184,6 +184,8 @@ view
 
 2 - img small
 3 - img large
+7 - img 2 col large
 
 4 - text small
 5 - text large
+5 - text circle
