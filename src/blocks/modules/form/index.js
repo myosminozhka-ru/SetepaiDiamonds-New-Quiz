@@ -5,6 +5,7 @@ export default class QForm {
     this.inputNodes = document.querySelectorAll('.q-form__item input');
     this.action = this.formNode ? this.formNode.getAttribute('action') : null;
     this.el = el
+    this.formType = document.querySelector('.q-app__start');
     
   }
   init() {
@@ -30,7 +31,11 @@ export default class QForm {
     }
     const formData = new FormData(this.formNode)
     const formDataStep = new FormData(this.el)
+    const formDataType = new FormData(this.formType)
     for (const pair of formDataStep.entries()) {
+      formData.append(pair[0], pair[1])
+    }
+    for (const pair of formDataType.entries()) {
       formData.append(pair[0], pair[1])
     }
     for (const pair of formData.entries()) {

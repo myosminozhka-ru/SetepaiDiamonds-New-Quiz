@@ -25,8 +25,6 @@ let radioTypeValue = null
 {
   const inners = document.querySelectorAll('.q-app__inner')
   inners.forEach(inner => {
-    console.log(inner)
-
     const els = inner.querySelectorAll('.q-step')
     els.forEach((element, index) => {
       const el = element
