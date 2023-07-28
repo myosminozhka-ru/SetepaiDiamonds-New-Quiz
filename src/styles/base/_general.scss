@@ -160,3 +160,22 @@ a {
     }
   }
 }
+
+.q-app {
+  &__inner,
+  &__start,
+  &__form,
+  &__finish {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+
+  &__inner .q-step {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}

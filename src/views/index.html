@@ -1,5 +1,41 @@
 @@include("../blocks/modules/header/header.html")
 
-@@include("../blocks/modules/1/index.html")
+
+<div class="q-app">
+  <form class="q-app__start active">
+    @@include("../blocks/modules/1/index.html")
+  </form>
+  <form class="q-app__inner q-app__inner--ring">
+    @@include("../blocks/modules/rings/2.html")
+    @@include("../blocks/modules/rings/3.html")
+    @@include("../blocks/modules/rings/4.html")
+    @@include("../blocks/modules/rings/5.html")
+  </form>
+  <form class="q-app__inner q-app__inner--earrings">
+    @@include("../blocks/modules/earrings/2.html")
+    @@include("../blocks/modules/earrings/3.html")
+    @@include("../blocks/modules/earrings/4.html")
+    @@include("../blocks/modules/earrings/5.html")
+  </form>
+  <form class="q-app__inner q-app__inner--necklace">
+    @@include("../blocks/modules/necklace/2.html")
+    @@include("../blocks/modules/necklace/3.html")
+    @@include("../blocks/modules/necklace/4.html")
+  </form>
+  <form class="q-app__inner q-app__inner--bracelet">
+    @@include("../blocks/modules/bracelets/2.html")
+    @@include("../blocks/modules/bracelets/3.html")
+    @@include("../blocks/modules/bracelets/4.html")
+    @@include("../blocks/modules/bracelets/5.html")
+  </form>
+  <div class="q-app__form">
+    @@include("../blocks/modules/form/index.html")
+  </div>
+  <div class="q-app__finish">
+    @@include("../blocks/modules/finish/index.html", {
+      img: ''
+    })
+  </div>
+</div>
 
 @@include("../blocks/modules/footer/footer.html")

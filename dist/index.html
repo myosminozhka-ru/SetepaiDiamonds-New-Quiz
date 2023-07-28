@@ -37,7 +37,10 @@
     </head>
     <body>
 
-<div class="q-step">
+
+<div class="q-app">
+  <form class="q-app__start active">
+    <div class="q-step">
   <div class="q-container">
     <div class="q-step__inner">
       <div class="q-step-header">
@@ -55,7 +58,7 @@
       
         
           <label class="q-items__label">
-            <input type="radio" name="step-1" value="ring" class="q-items__input visually-hidden">
+            <input type="radio" name="item" value="ring" class="q-items__input visually-hidden">
             <span class="q-items__ps-radio">
               <span class="q-items__img">
                 <img src="img/step1-1.jpg" alt="">
@@ -72,7 +75,7 @@
           </label>
         
           <label class="q-items__label">
-            <input type="radio" name="step-1" value="bracelet" class="q-items__input visually-hidden">
+            <input type="radio" name="item" value="bracelet" class="q-items__input visually-hidden">
             <span class="q-items__ps-radio">
               <span class="q-items__img">
                 <img src="img/step1-2.jpg" alt="">
@@ -89,7 +92,7 @@
           </label>
         
           <label class="q-items__label">
-            <input type="radio" name="step-1" value="earrings" class="q-items__input visually-hidden">
+            <input type="radio" name="item" value="earrings" class="q-items__input visually-hidden">
             <span class="q-items__ps-radio">
               <span class="q-items__img">
                 <img src="img/step1-3.jpg" alt="">
@@ -106,7 +109,7 @@
           </label>
         
           <label class="q-items__label">
-            <input type="radio" name="step-1" value="necklace" class="q-items__input visually-hidden">
+            <input type="radio" name="item" value="necklace" class="q-items__input visually-hidden">
             <span class="q-items__ps-radio">
               <span class="q-items__img">
                 <img src="img/step1-4.jpg" alt="">
@@ -130,31 +133,1772 @@
 </div>
       <div class="q-controller">
   <div class="q-controller__inner">
-    <a href="#" class="q-controller__btn q-controller__btn--prev q-hide">
+    <button class="q-controller__btn q-controller__btn--prev q-hide" type="button">
       <span class="q-controller__btn-icon">
         <svg>
           <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
         </svg>
       </span>
       <span class="q-controller__btn-str">Back</span>
-    </a>
+    </button>
     <div class="q-controller__progress">
       <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 1)"></div>
     </div>
-    
-      <a href="/next-page" class="q-controller__btn q-controller__btn--next q-disabled">
-        <span class="q-controller__btn-str">Next</span>
-        <span class="q-controller__btn-icon">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#q-next"></use>
-          </svg>
-        </span>
-      </a>
-    
-    
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
   </div>
 </div>
     </div>
+  </div>
+</div>
+  </form>
+  <form class="q-app__inner q-app__inner--ring">
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">02</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Which shape of diamond do you prefer?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-2 q-items--type-rings q-items--view-2">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Round" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond1.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Round
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Oval" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond2.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Oval
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Marquise" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond3.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Marquise
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Pear" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond4.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Pear
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Heart" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond5.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Heart
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Princess" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond6.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Princess
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Radiant" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond7.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Radiant
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Emerald" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond8.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Emerald
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Cuchion" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond9.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Cuchion
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 2)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">03</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">What type of setting do you prefer?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-3 q-items--type-rings q-items--view-3">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="Solitaire" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/q-ring-type-1.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Solitaire
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="Halo" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/q-ring-type-2.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Halo
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="Three-stones" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/q-ring-type-3.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Three stones
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 3)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">04</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific budget in mind<br class="br-pc"> for the custom jewelry?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-4 q-items--type-rings q-items--view-4">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="5000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt5000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="10000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt10 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="20000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt20 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="30000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt30 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="50000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt50 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="none" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  I dont<br class="br-pc"/> know yet
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 4)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">05</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific timeline or deadline? </div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-5 q-items--type-rings q-items--view-5">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="Asap" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Asap
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="more1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 5)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </form>
+  <form class="q-app__inner q-app__inner--earrings">
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">02</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Which shape of diamond do you prefer?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-2 q-items--type-earrings q-items--view-2">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Round" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond1.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Round
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Oval" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond2.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Oval
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Emerald" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond8.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Emerald
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Cuchion" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond9.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Cuchion
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Heart" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond5.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Heart
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Pear" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond4.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Pear
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 2)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">03</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">What is your wrist size for the desired bracelet?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-3 q-items--type-earrings q-items--view-8">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="1" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  1 carat total weight (0,5 ct each)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="2" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  2 carats total weight (1 ct each)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="3" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  3 carats total (1,5 ct each)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="4" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  4 carat total weight (2 ct each)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="5" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  5 carats total weight (2,5 ct each)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="6" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  6 carat total weight (3 ct each)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="none" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  I dont<br class="br-pc"/> know yet
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 3)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">04</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific budget in mind<br class="br-pc"> for the custom jewelry?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-4 q-items--type-earrings q-items--view-4">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="5000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt5000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="10000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt10 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="20000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt20 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="30000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt30 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="50000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt50 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="none" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  I dont<br class="br-pc"/> know yet
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 4)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">05</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific timeline or deadline? </div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-5 q-items--type-earrings q-items--view-5">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="Asap" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Asap
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="more1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 5)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </form>
+  <form class="q-app__inner q-app__inner--necklace">
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">02</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">which style of tennis necklace do you prefer?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-2 q-items--type-necklace q-items--view-7">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="4" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/q-necklace-1.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Tennis necklace (4 prongs set)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="3" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/q-necklace-2.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Graduating tennis necklace (3 prong set)
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 6 * 2)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">03</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific budget in mind<br class="br-pc"> for the custom jewelry?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-3 q-items--type-necklace q-items--view-4">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="5000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt5000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="10000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt10 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="20000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt20 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="30000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt30 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="50000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt50 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="none" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  I dont<br class="br-pc"/> know yet
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 6 * 3)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">04</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific timeline or deadline? </div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-4 q-items--type-necklace q-items--view-5">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="Asap" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Asap
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="more1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 6 * 4)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </form>
+  <form class="q-app__inner q-app__inner--bracelet">
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">02</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Which shape of diamond do you prefer?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-2 q-items--type-bracelets q-items--view-2">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Round" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond1.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Round
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Oval" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond2.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Oval
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Emerald" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond8.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Emerald
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Cuchion" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond9.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Cuchion
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Heart" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond5.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Heart
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-2" value="Pear" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__img">
+                <img src="img/diamond4.png" alt="">
+              </span>
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Pear
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 2)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">03</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">What is your wrist size for the desired bracelet?</div>
+    
+      <div class="q-step-header__subtitle">Please measure your wrist circumference and provide <br> the measurement in inches.</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-3 q-items--type-bracelets q-items--view-6">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="5-6" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  5-6’
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="7-8" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  7-8’
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="9-10" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  9-10’
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-3" value="none" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  I dont<br class="br-pc"/> know yet
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 3)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">04</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific budget in mind<br class="br-pc"> for the custom jewelry?</div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-4 q-items--type-bracelets q-items--view-4">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="5000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt5000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="10000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt10 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="20000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt20 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="30000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt30 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="50000" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt50 000$
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-4" value="none" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  I dont<br class="br-pc"/> know yet
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 4)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">05</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Do you have a specific timeline or deadline? </div>
+    
+  </div>
+</div>
+      <div class="q-items q-items--step-5 q-items--type-bracelets q-items--view-5">
+  <div class="q-items__inner">
+    <div class="q-items__list">
+      
+      
+      
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="Asap" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  Asap
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+          <label class="q-items__label">
+            <input type="radio" name="step-5" value="more1month" class="q-items__input visually-hidden">
+            <span class="q-items__ps-radio">
+              <span class="q-items__name">
+                <span class="q-items__name-str">
+                  &lt1 month
+                </span>
+              </span>
+            </span>
+          </label>
+        
+      
+    </div>
+  </div>
+</div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 5)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </form>
+  <div class="q-app__form">
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">06</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Congratulations!</div>
+    
+  </div>
+</div>
+      <div class="q-form">
+        <div class="q-form__header-texts">
+          <div>Based on the information you provided, we have an exclusive and rare offer ready just for you. Our team has crafted a truly unique custom jewelry design that perfectly aligns with your preferences. </div>
+          <div>We will be contacting you shortly with all the exciting details, including the design concept, materials, pricing, and estimated timeline. Thank you for choosing our custom jewelry website for this special opportunity!</div>
+        </div>
+        <form class="q-form__form" action="" type="POST">
+          <div class="q-form__title">To proceed with this rare offer, please provide us with your contact information:</div>
+          <div class="q-form__list">
+            <label class="q-form__item">
+              <input type="name" name="name" placeholder="Full Name" required>
+              <span class="q-input-pen">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#q-input-pen"></use>
+                </svg>
+              </span>
+              <span class="q-input-required">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#q-input-required"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="q-form__item">
+              <input type="email" name="email" placeholder="Email Address" required>
+              <span class="q-input-pen">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#q-input-pen"></use>
+                </svg>
+              </span>
+              <span class="q-input-required">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#q-input-required"></use>
+                </svg>
+              </span>
+            </label>
+            <label class="q-form__item">
+              <input type="tel" name="tel" placeholder="Phone Number" required>
+              <span class="q-input-pen">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#q-input-pen"></use>
+                </svg>
+              </span>
+              <span class="q-input-required">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#q-input-required"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="q-controller">
+  <div class="q-controller__inner">
+    <button class="q-controller__btn q-controller__btn--prev " type="button">
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
+        </svg>
+      </span>
+      <span class="q-controller__btn-str">Back</span>
+    </button>
+    <div class="q-controller__progress">
+      <div class="q-controller__progress-bar" style="width: calc(100% / 7 * 6)"></div>
+    </div>
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="q-app__finish">
+    <div class="q-step">
+  <div class="q-container">
+    <div class="q-step__inner">
+      <div class="q-step-header">
+  <div class="q-step-header__number">
+    <div class="q-step-header__number-str">07</div>
+  </div>
+  <div class="q-step-header__titles">
+    <div class="q-step-header__title">Thank you for completing the quiz form!</div>
+    
+  </div>
+</div>
+      <div class="q-finish">
+        <div class="q-finish__inner">
+          <div class="q-finish__img">
+            <img src="img/" alt="">
+          </div>
+          <div class="q-finish__caption">We can't wait to unveil this exclusive custom jewelry piece created exclusively for you!
+            We promise to get in touch with you as soon as possible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </div>
 

@@ -1,35 +1,23 @@
 <div class="q-controller">
   <div class="q-controller__inner">
-    <a href="#" class="q-controller__btn q-controller__btn--prev @@prevHide">
+    <button class="q-controller__btn q-controller__btn--prev @@prevHide" type="button">
       <span class="q-controller__btn-icon">
         <svg>
           <use xlink:href="img/sprites/sprite.svg#q-prev"></use>
         </svg>
       </span>
       <span class="q-controller__btn-str">Back</span>
-    </a>
+    </button>
     <div class="q-controller__progress">
       <div class="q-controller__progress-bar" style="width: calc(100% / @@steps * @@progress)"></div>
     </div>
-    @@if (nextIsFormButtons === false) {
-      <a href="/next-page" class="q-controller__btn q-controller__btn--next q-disabled">
-        <span class="q-controller__btn-str">Next</span>
-        <span class="q-controller__btn-icon">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#q-next"></use>
-          </svg>
-        </span>
-      </a>
-    }
-    @@if (nextIsFormButtons === true) {
-      <a href="/next-page" class="q-controller__btn q-controller__btn--next q-controller__btn--submit">
-        <span class="q-controller__btn-str">Next</span>
-        <span class="q-controller__btn-icon">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#q-next"></use>
-          </svg>
-        </span>
-      </a>
-    }
+    <button class="q-controller__btn q-controller__btn--next q-disabled" type="button">
+      <span class="q-controller__btn-str">Next</span>
+      <span class="q-controller__btn-icon">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#q-next"></use>
+        </svg>
+      </span>
+    </button>
   </div>
 </div>

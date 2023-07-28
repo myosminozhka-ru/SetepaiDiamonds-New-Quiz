@@ -1,32 +1,38 @@
 export default class Controller {
-  constructor() {
-    this.prevBtnNode = document.querySelector('.q-controller__btn.q-controller__btn--prev');
-    this.nextBtnNode = document.querySelector('.q-controller__btn.q-controller__btn--next');
-    this.initPath = this.nextBtnNode.getAttribute('href');
+  constructor(el) {
+    this.prevBtnNode = el.querySelector(`.q-controller__btn.q-controller__btn--prev`);
+    this.nextBtnNode = el.querySelector(`.q-controller__btn.q-controller__btn--next`);
+    this.nextCallbacks = [];
+    this.prevCallbacks = [];
+    
+    this.init();
   }
-  setQuery(e, data) {
-    let currentQuery = this.nextBtnNode.getAttribute('href')
-    const url = new URL(window.location.origin + currentQuery)
-    const urlParams = new URLSearchParams(url.search);
-    const pathname = url.pathname.replace(/\/{2,}/, '/')
-    if (urlParams.size === 0) {
-      this.nextBtnNode.setAttribute('href', pathname + '?' + data.string)
-    } else {
-      const nameHas = urlParams.has(data.name)
-      if (nameHas) {
-        urlParams.set(data.name, data.value)
-        this.nextBtnNode.setAttribute('href', pathname + '?' + urlParams.toString())
-      } else {
-        urlParams.set(data.name, data.value)
-        this.nextBtnNode.setAttribute('href', currentQuery + '&' + data.string)
-      }
-    }
-    this.ableNext()
+  init() {
+    this.nextHandler()
+    this.prevHandler()
+  }
+  nextHandler() {
+    this.nextBtnNode ? this.nextBtnNode?.addEventListener('click', this.next.bind(this)) : null;
+  }
+  prevHandler() {
+    this.prevBtnNode ? this.prevBtnNode?.addEventListener('click', this.prev.bind(this)) : null;
+  }
+  next(e) {
+    this.nextCallbacks.forEach(callback => callback(e))
+  }
+  prev(e) {
+    this.prevCallbacks.forEach(callback => callback(e))
   }
   disableNext(e, data) {
     this.nextBtnNode.classList.add('q-disabled')
   }
   ableNext() {
     this.nextBtnNode.classList.remove('q-disabled')
+  }
+  onNext(callback) {
+    this.nextCallbacks.push(callback)
+  }
+  onPrev(callback) {
+    this.prevCallbacks.push(callback)
   }
 }

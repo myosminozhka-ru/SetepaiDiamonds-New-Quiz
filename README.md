@@ -188,4 +188,4 @@ view
 
 4 - text small
 5 - text large
-5 - text circle
+6 - text circle

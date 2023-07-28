@@ -1,6 +1,6 @@
 export default class RadioBtns {
-  constructor() {
-    this.inputNodes = document.querySelectorAll('.q-items__input');
+  constructor(el) {
+    this.inputNodes = el.querySelectorAll(`.q-items__input`);
     this.callbacks = [];
     this.init();
   }
@@ -9,20 +9,11 @@ export default class RadioBtns {
   }
   changeHandler() {
     this.inputNodes.forEach(input => {
-      input.addEventListener('change', this.getNextLinkQuery.bind(this))
+      input.addEventListener('change', this.change.bind(this))
     })
   }
-  getNextLinkQuery(e) {
-    const target = e.target
-    const name = target.name
-    const value = target.value
-    const obj = {
-      name,
-      value,
-      string: `${name}=${value}`
-    }
-    this.callbacks.forEach(callback => callback(e, obj))
-    return obj;
+  change(e) {
+    this.callbacks.forEach(callback => callback(e))
   }
   onChange(callback) {
     this.callbacks.push(callback)
