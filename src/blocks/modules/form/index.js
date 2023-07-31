@@ -1,3 +1,53 @@
+import validationLocal from '../../../js/libs/validationLocal'
+import local from '../../../js/import/local'
+const {keys, dictLocale, regex} = validationLocal
+function validate() {
+  if (!document.querySelector('.q-form__form')) return
+  const validation = new JustValidate('.q-form__form', {
+    validateBeforeSubmitting: true,
+  }, dictLocale);
+  validation.setCurrentLocale(local.current);
+  validation
+    .addField('[name="name"]', [
+      {
+        rule: 'minLength',
+        value: 2,
+        errorMessage: keys.minLength,
+      },
+      {
+        rule: 'maxLength',
+        value: 30,
+        errorMessage: keys.maxLength,
+      },
+      {
+        rule: 'required',
+        errorMessage: keys.required,
+      },
+    ])
+    .addField('[name="tel"]', [
+      {
+        rule: 'required',
+        errorMessage: keys.required,
+      },
+      {
+        rule: 'customRegexp',
+        value: regex.tel,
+        errorMessage: keys.tel,
+      },
+    ])
+    .addField('[name="email"]', [
+      {
+        rule: 'required',
+        errorMessage: keys.emailRequired,
+      },
+      {
+        rule: 'customRegexp',
+        value: regex.email,
+        errorMessage: keys.email,
+      },
+    ])
+  return validation
+}
 export default class QForm {
   constructor(el) {
     this.formNode = document.querySelector('.q-form__form');
@@ -6,10 +56,19 @@ export default class QForm {
     this.action = this.formNode ? this.formNode.getAttribute('action') : null;
     this.el = el
     this.formType = document.querySelector('.q-app__start');
-    
+    this.validation = validate()
+    this.invalid = false
+    this.init()
   }
   init() {
-    this.submitHandler()
+    console.log(this.validation, validate)
+    this.validation.onValidate(evt => {
+      if (evt.isValid) {
+        this.invalid = false
+      } else {
+        this.invalid = true
+      }
+    })
   }
   initEl(el) {
     this.el = el
@@ -19,13 +78,7 @@ export default class QForm {
   }
   async submit(e) {
     e?.preventDefault();
-    let invalid = false
-    this.inputNodes.forEach(element => {
-      if (element.value === '') {
-        invalid = true
-      }
-    });
-    if (invalid) {
+    if (this.invalid) {
       alert('Fill in all required fields')
       return
     }

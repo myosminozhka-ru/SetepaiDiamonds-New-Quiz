@@ -2,6 +2,7 @@ import RadioBtns from "%modules%/items/index.js";
 import Controller from "%modules%/UI/index.js";
 import Form from "%modules%/form/index.js";
 import Steps from "./steps.js";
+import phoneMask from "./phoneMask";
 
 const step = new Steps()
 const feedback = new Form()
@@ -82,5 +83,6 @@ let radioTypeValue = null
 
 window.qapp = {
   step,
-  feedback
+  feedback,
+  phoneMask: phoneMask('[type="tel"]'),
 }
