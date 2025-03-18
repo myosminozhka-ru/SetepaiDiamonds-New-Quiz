@@ -1,47 +1,47 @@
-import validationLocal from '../../../js/libs/validationLocal'
-import local from '../../../js/import/local'
+import validationLocal from "../../../js/libs/validationLocal"
+import local from "../../../js/import/local"
 const {keys, dictLocale, regex} = validationLocal
 function validate() {
-  if (!document.querySelector('.q-form__form')) return
-  const validation = new JustValidate('.q-form__form', {
+  if (!document.querySelector(".q-form__form")) return
+  const validation = new JustValidate(".q-form__form", {
     validateBeforeSubmitting: true,
   }, dictLocale);
   validation.setCurrentLocale(local.current);
   validation
-    .addField('[name="name"]', [
+    .addField("[name=\"name\"]", [
       {
-        rule: 'minLength',
+        rule: "minLength",
         value: 2,
         errorMessage: keys.minLength,
       },
       {
-        rule: 'maxLength',
+        rule: "maxLength",
         value: 30,
         errorMessage: keys.maxLength,
       },
       {
-        rule: 'required',
+        rule: "required",
         errorMessage: keys.required,
       },
     ])
-    .addField('[name="tel"]', [
+    .addField("[name=\"tel\"]", [
       {
-        rule: 'required',
+        rule: "required",
         errorMessage: keys.required,
       },
       {
-        rule: 'customRegexp',
+        rule: "customRegexp",
         value: regex.tel,
         errorMessage: keys.tel,
       },
     ])
-    .addField('[name="email"]', [
+    .addField("[name=\"email\"]", [
       {
-        rule: 'required',
+        rule: "required",
         errorMessage: keys.emailRequired,
       },
       {
-        rule: 'customRegexp',
+        rule: "customRegexp",
         value: regex.email,
         errorMessage: keys.email,
       },
@@ -50,36 +50,28 @@ function validate() {
 }
 export default class QForm {
   constructor(el) {
-    this.formNode = document.querySelector('.q-form__form');
-    this.formBtn = document.querySelector('.q-controller__btn--submit');
-    this.inputNodes = document.querySelectorAll('.q-form__item input');
-    this.action = this.formNode ? this.formNode.getAttribute('action') : null;
+    this.formNode = document.querySelector(".q-form__form");
+    this.formBtn = document.querySelector(".q-controller__btn--submit");
+    this.inputNodes = document.querySelectorAll(".q-form__item input");
+    this.action = this.formNode ? this.formNode.getAttribute("action") : null;
     this.el = el
-    this.formType = document.querySelector('.q-app__start');
+    this.formType = document.querySelector(".q-app__start");
     this.validation = validate()
     this.invalid = false
-    this.init()
-  }
-  init() {
-    console.log(this.validation, validate)
-    this.validation.onValidate(evt => {
-      if (evt.isValid) {
-        this.invalid = false
-      } else {
-        this.invalid = true
-      }
-    })
   }
   initEl(el) {
     this.el = el
   }
   submitHandler() {
-    this.formBtn ? this.formBtn.addEventListener('click', this.submit.bind(this)) : null;
+    this.formBtn ? this.formBtn.addEventListener("click", this.submit.bind(this)) : null;
   }
   async submit(e) {
     e?.preventDefault();
+    this.validation.onValidate(evt => {
+      this.invalid = !evt.isValid;
+    })
     if (this.invalid) {
-      alert('Fill in all required fields')
+      alert("Fill in all required fields")
       return
     }
     const formData = new FormData(this.formNode)
@@ -95,12 +87,13 @@ export default class QForm {
       console.log(`${pair[0]}, ${pair[1]}`);
     }
     const response = await fetch(this.action, {
-      method: 'POST',
+      method: "POST",
       body: formData,
     })
+    console.log('response', response)
     if (response.ok) { // если HTTP-статус в диапазоне 200-299
       return {
-        status: 'ok'
+        status: "ok"
       }
     } else {
       alert("ERROR HTTP: " + response.status);

@@ -1,4 +1,4 @@
-const lang = document.querySelector('html').getAttribute('lang')
+const lang = document.querySelector("html").getAttribute("lang")
 export default {
   current: lang,
   tampl: {

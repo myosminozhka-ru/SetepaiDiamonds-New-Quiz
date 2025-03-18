@@ -13,9 +13,13 @@
     position: relative;
     cursor: pointer;
   }
+  &__ps-radio {
+    border: 1px solid transparent;
+    transition: border 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
   &__input:checked + .q-items__ps-radio {
-    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.10);
-    border: 1px solid $white;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.10);
+    border-color: $white;
   }
   &__ps-radio {
     display: block;
@@ -161,7 +165,7 @@
         grid-gap: 10px;
       }
       &__input:checked + .q-items__ps-radio {
-        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.10);
+        box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.10);
         border: 1px solid $black;
       }
       &__name {

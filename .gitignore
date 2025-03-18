@@ -36,8 +36,17 @@ package-lock.json
 .env
 .yarn/cache
 .yarn/install-state.gz
+vue/.yarn/cache
+vue/.yarn/install-state.gz
+vue/dist
+/vue/dist
+vue/public
+/vue/public
 ehthumbs.db
 Thumbs.db
 _config.yml
 node_modules
 package-lock.json
+/dist
+.pnp.cjs
+.pnp.loader.mjs

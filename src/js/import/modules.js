@@ -9,7 +9,7 @@ const feedback = new Form()
 
 let radioTypeValue = null
 {
-  const el = document.querySelector('.q-app__start')
+  const el = document.querySelector(".q-app__start")
   const controller = new Controller(el)
   const radioBtns = new RadioBtns(el)
   radioBtns.onChange((e) => {
@@ -24,9 +24,9 @@ let radioTypeValue = null
 }
 
 {
-  const inners = document.querySelectorAll('.q-app__inner')
+  const inners = document.querySelectorAll(".q-app__inner")
   inners.forEach(inner => {
-    const els = inner.querySelectorAll('.q-step')
+    const els = inner.querySelectorAll(".q-step")
     els.forEach((element, index) => {
       const el = element
       const controller = new Controller(el)
@@ -59,15 +59,15 @@ let radioTypeValue = null
 }
 
 {
-  const el = document.querySelector('.q-app__form')
+  const el = document.querySelector(".q-app__form")
   const controller = new Controller(el)
-  const img = document.querySelector('.q-finish__img img')
+  const img = document.querySelector(".q-finish__img img")
   controller.ableNext()
   controller.onNext((e) => {
     feedback.initEl(document.querySelector(`.q-app__inner--${radioTypeValue}`))
     feedback.submit().then(res => {
-      if (res.status === 'ok') {
-        img.setAttribute('src', img.getAttribute('src') + radioTypeValue + '.png')
+      if (res.status === "ok") {
+        img.setAttribute("src", img.getAttribute("src") + radioTypeValue + ".png")
         res.img ? img.setAttribute(res.img) : null;
         step.closeForm()
         step.openFinish()
@@ -84,5 +84,5 @@ let radioTypeValue = null
 window.qapp = {
   step,
   feedback,
-  phoneMask: phoneMask('[type="tel"]'),
+  phoneMask: phoneMask("[type=\"tel\"]"),
 }
