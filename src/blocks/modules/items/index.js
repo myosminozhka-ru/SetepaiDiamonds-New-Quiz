@@ -1,6 +1,6 @@
 export default class RadioBtns {
   constructor(el) {
-    this.inputNodes = el.querySelectorAll(`.q-items__input`);
+    this.inputNodes = el.querySelectorAll(".q-items__input");
     this.callbacks = [];
     this.init();
   }
@@ -9,7 +9,7 @@ export default class RadioBtns {
   }
   changeHandler() {
     this.inputNodes.forEach(input => {
-      input.addEventListener('change', this.change.bind(this))
+      input.addEventListener("change", this.change.bind(this))
     })
   }
   change(e) {

@@ -2,7 +2,6 @@ import RadioBtns from "%modules%/items/index.js";
 import Controller from "%modules%/UI/index.js";
 import Form from "%modules%/form/index.js";
 import Steps from "./steps.js";
-import phoneMask from "./phoneMask";
 
 const step = new Steps()
 const feedback = new Form()
@@ -16,7 +15,7 @@ let radioTypeValue = null
     controller.ableNext(e)
     radioTypeValue = e.target.value
   })
-  controller.onNext((e) => {
+  controller.onNext(() => {
     step.closeStart()
     step.openType(radioTypeValue)
     step.toType(radioTypeValue, 0)
@@ -34,7 +33,7 @@ let radioTypeValue = null
       radioBtns.onChange((e) => {
         controller.ableNext(e)
       })
-      controller.onNext((e) => {
+      controller.onNext(() => {
         if (index === 0) {
           step.toStep(index + 1)
         } else if (index === els.length - 1) {
@@ -44,7 +43,7 @@ let radioTypeValue = null
           step.toStep(index + 1)
         }
       })
-      controller.onPrev((e) => {
+      controller.onPrev(() => {
         if (index === 0) {
           step.closeType(radioTypeValue)
           step.openStart()
@@ -63,19 +62,28 @@ let radioTypeValue = null
   const controller = new Controller(el)
   const img = document.querySelector(".q-finish__img img")
   controller.ableNext()
-  controller.onNext((e) => {
+  controller.onNext(() => {
     feedback.initEl(document.querySelector(`.q-app__inner--${radioTypeValue}`))
     feedback.submit().then(res => {
-      if (res.status === "ok") {
+      if (res?.status === "ok") {
         img.setAttribute("src", img.getAttribute("src") + radioTypeValue + ".png")
-        res.img ? img.setAttribute(res.img) : null;
+        if(res.img){
+          //Предполагаем, что res.img - объект с ключом и значением атрибута, который нужно установить
+          for (const key in res.img) {
+            if (Object.prototype.hasOwnProperty.call(res.img, key)) {
+              img.setAttribute(key, res.img[key]);
+            }
+          }
+        }
         step.closeForm()
         step.openFinish()
       }
-    })
+    }).catch(error => {
+      console.error("Error in onNext:", error); // Обрабатываем ошибку, если она возникнет
+    });
   })
 
-  controller.onPrev((e) => {
+  controller.onPrev(() => {
     step.closeForm()
     step.openType(radioTypeValue)
   })
@@ -84,5 +92,4 @@ let radioTypeValue = null
 window.qapp = {
   step,
   feedback,
-  phoneMask: phoneMask("[type=\"tel\"]"),
 }

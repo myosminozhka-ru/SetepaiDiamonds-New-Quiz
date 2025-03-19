@@ -1,102 +1,127 @@
 import validationLocal from "../../../js/libs/validationLocal"
 import local from "../../../js/import/local"
+import IMask from "../../../js/libs/imask";
+
 const {keys, dictLocale, regex} = validationLocal
+
 function validate() {
-  if (!document.querySelector(".q-form__form")) return
-  const validation = new JustValidate(".q-form__form", {
-    validateBeforeSubmitting: true,
-  }, dictLocale);
-  validation.setCurrentLocale(local.current);
-  validation
-    .addField("[name=\"name\"]", [
-      {
-        rule: "minLength",
-        value: 2,
-        errorMessage: keys.minLength,
-      },
-      {
-        rule: "maxLength",
-        value: 30,
-        errorMessage: keys.maxLength,
-      },
-      {
-        rule: "required",
-        errorMessage: keys.required,
-      },
-    ])
-    .addField("[name=\"tel\"]", [
-      {
-        rule: "required",
-        errorMessage: keys.required,
-      },
-      {
-        rule: "customRegexp",
-        value: regex.tel,
-        errorMessage: keys.tel,
-      },
-    ])
-    .addField("[name=\"email\"]", [
-      {
-        rule: "required",
-        errorMessage: keys.emailRequired,
-      },
-      {
-        rule: "customRegexp",
-        value: regex.email,
-        errorMessage: keys.email,
-      },
-    ])
-  return validation
+    if (!document.querySelector(".q-form__form")) return
+    const validation = new JustValidate(".q-form__form", {
+        validateBeforeSubmitting: true,
+    }, dictLocale);
+    validation.setCurrentLocale(local.current);
+    validation
+        .addField("[name=\"name\"]", [
+            {
+                rule: "minLength",
+                value: 2,
+                errorMessage: keys.minLength,
+            },
+            {
+                rule: "maxLength",
+                value: 30,
+                errorMessage: keys.maxLength,
+            },
+            {
+                rule: "required",
+                errorMessage: keys.required,
+            },
+        ])
+        .addField("[name=\"tel\"]", [
+            {
+                rule: "required",
+                errorMessage: keys.required,
+            },
+            {
+                rule: "customRegexp",
+                value: regex.tel,
+                errorMessage: keys.tel,
+            },
+        ])
+        .addField("[name=\"email\"]", [
+            {
+                rule: "required",
+                errorMessage: keys.emailRequired,
+            },
+            {
+                rule: "customRegexp",
+                value: regex.email,
+                errorMessage: keys.email,
+            },
+        ])
+    return validation
 }
+
 export default class QForm {
-  constructor(el) {
-    this.formNode = document.querySelector(".q-form__form");
-    this.formBtn = document.querySelector(".q-controller__btn--submit");
-    this.inputNodes = document.querySelectorAll(".q-form__item input");
-    this.action = this.formNode ? this.formNode.getAttribute("action") : null;
-    this.el = el
-    this.formType = document.querySelector(".q-app__start");
-    this.validation = validate()
-    this.invalid = false
-  }
-  initEl(el) {
-    this.el = el
-  }
-  submitHandler() {
-    this.formBtn ? this.formBtn.addEventListener("click", this.submit.bind(this)) : null;
-  }
-  async submit(e) {
-    e?.preventDefault();
-    this.validation.onValidate(evt => {
-      this.invalid = !evt.isValid;
-    })
-    if (this.invalid) {
-      alert("Fill in all required fields")
-      return
+    constructor(el) {
+        this.formNode = document.querySelector(".q-form__form");
+        this.formBtn = document.querySelector(".q-controller__btn--submit");
+        this.inputNodes = document.querySelectorAll(".q-form__item input");
+        this.action = this.formNode ? this.formNode.getAttribute("action") : null;
+        this.el = el
+        this.formType = document.querySelector(".q-app__start");
+        this.validation = validate();
+        this.init()
     }
-    const formData = new FormData(this.formNode)
-    const formDataStep = new FormData(this.el)
-    const formDataType = new FormData(this.formType)
-    for (const pair of formDataStep.entries()) {
-      formData.append(pair[0], pair[1])
+
+    init() {
+        const phoneMask = IMask(this.formNode.querySelector("input[type='tel']"), {mask: "+{1}(000) 000-00-00"})
+        this.submitHandler();
+        phoneMask.on('complete', () => {
+            this.validation.revalidate();
+        });
     }
-    for (const pair of formDataType.entries()) {
-      formData.append(pair[0], pair[1])
+
+    initEl(el) {
+        this.el = el
     }
-    for (const pair of formData.entries()) {
-      console.log(`${pair[0]}, ${pair[1]}`);
+
+    submitHandler() {
+        this.formBtn ? this.formBtn.addEventListener("click", this.submit.bind(this)) : null;
     }
-    const response = await fetch(this.action, {
-      method: "POST",
-      body: formData,
-    })
-    console.log('response', response)
-    if (response.ok) { // если HTTP-статус в диапазоне 200-299
-      return {
-        status: "ok"
-      }
-    } else {
-      alert("ERROR HTTP: " + response.status);
+
+    async submit(e) {
+        e?.preventDefault();
+
+        try {
+            const isValid = await this.validation.revalidate();
+
+            if (!isValid) {
+                alert("Fill in all required fields");
+                return; // Важно: прерываем выполнение функции, если форма не валидна
+            }
+
+            const formData = new FormData(this.formNode);
+            const formDataStep = new FormData(this.el);
+            const formDataType = new FormData(this.formType);
+
+            for (const pair of formDataStep.entries()) {
+                formData.append(pair[0], pair[1]);
+            }
+            for (const pair of formDataType.entries()) {
+                formData.append(pair[0], pair[1]);
+            }
+
+            /*for (const pair of formData.entries()) {
+                console.log(`${pair[0]}, ${pair[1]}`);
+            }*/
+
+            const response = await fetch(this.action, {
+                method: "POST",
+                body: formData,
+            });
+
+
+            if (!response.ok) {
+                alert("ERROR HTTP: " + response.status);
+                throw new Error(`HTTP error! Status: ${response.status}`); // Бросаем ошибку в случае неудачи
+            }
+
+            return { status: "ok" }; // Возвращаем объект в случае успеха
+
+        } catch (error) {
+            console.error("Error during form submission:", error);
+            return false;
+        }
     }
-  }
 }
